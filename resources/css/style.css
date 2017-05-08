@@ -1,3 +1,73 @@
+html {
+	font-family: "helvetica", sans-serif;
+	font-size: 16px;
+	background-color: white;
+}
+
 div {
   border: 1px solid red;
+}
+
+header {
+  z-index: 10;
+  position: fixed;
+  width: 100%;
+  background-color: white;
+}
+
+.brand {
+  display: flex;
+  flex: 1;
+  align-items: center;
+}
+
+header .content {
+  margin:0 1.5rem;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+}
+
+header nav ul {
+  display: flex;
+}
+
+header nav ul li {
+  padding: 0 1rem;
+}
+
+@media only screen and (min-width: 761px) {
+  .mobile {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 760px) {
+  header .desktop {
+    display: none;
+  }
+
+  .brand {
+    display: none;
+  }
+
+  header .mobile {
+    display: block;
+    width: 100%;
+  }
+
+  header .content {
+    padding: .5rem 0;
+  }
+
+  header .mobile ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+  }
+
+  header .mobile li {
+    padding: 0;
+  }
 }
