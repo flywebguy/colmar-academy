@@ -5,8 +5,48 @@ html {
 }
 
 div {
-  border: 1px solid red;
+  /* border: 1px solid red; */ 
 }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Julius Sans One', sans-serif;
+}
+
+h1 {
+  font-weight: 800;
+  font-size: 3.5rem;
+}
+
+h2 {
+  font-weight: 600;
+  font-size: 3rem;
+}
+
+h3 {
+  font-weight: 500;
+  font-size: 2.25rem;
+}
+
+h4 {
+  font-weight: 500;
+  font-size: 1.8rem;
+}
+
+h5 {
+  font-weight: 500;
+  font-size: 1.4rem;
+}
+
+p {
+  font-family: 'Crimson Text', serif;
+}
+
+.flex {
+  display: flex;
+}
+
+
+/* Header Styles */
 
 header {
   font-family: 'Julius Sans One', sans-serif;
@@ -14,6 +54,12 @@ header {
   position: fixed;
   width: 100%;
   background-color: #fff;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+header:hover {
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
 
 header a {
@@ -25,10 +71,12 @@ header a {
   display: flex;
   flex: 1;
   align-items: center;
+  color: #34495e;
 }
 
 .brand h1 {
   font-weight: 700;
+  font-size: 1.2rem;
 }
 
 .brand h1 span {
@@ -86,13 +134,13 @@ header nav ul li {
 	transform: translateX(0px);
 }
 
-@media only screen and (min-width: 761px) {
+@media only screen and (min-width: 851px) {
   .mobile {
     display: none;
   }
 }
 
-@media only screen and (max-width: 760px) {
+@media only screen and (max-width: 850px) {
   header .desktop {
     display: none;
   }
@@ -120,4 +168,124 @@ header nav ul li {
   header .mobile li {
     padding: 0;
   }
+}
+
+/* First Banner */
+
+
+/* Start Moving Background */
+
+.banner {
+  color: #ecf0f1;
+  padding-top: 4rem;
+  background: linear-gradient(230deg,#a24bcf,#4b79cf,#4bc5cf);
+    background-size: 300% 300%;
+    -webkit-animation: MoveBG 60s ease infinite;
+    -moz-animation: MoveBG 60s ease infinite;
+    -o-animation: MoveBG 60s ease infinite;
+    animation: MoveBG 60s ease infinite;
+}
+
+@-webkit-keyframes MoveBG {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes MoveBG {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes MoveBG { 
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
+/* End Moving Background */
+
+.second-banner .banner-text {
+  margin-top: 2rem;
+}
+
+.second-banner {
+  color: #2c3e50;
+}
+
+.banner-text .info {
+  
+}
+
+.banner-wrapper {
+  margin: 2rem 1.5rem;
+}
+
+
+.banner-left {
+  width: 60%;
+}
+
+.image-container {
+  width: 100%;
+}
+
+.image-container img {
+  width: inherit;
+  height: auto;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  opacity: 0.7;
+}
+
+.banner-right {
+  width: 40%;
+  margin-left: 2.5rem;
+  padding-right: 3rem;
+}
+
+.banner-right, .banner-text {
+  flex-direction: column;
+  justify-content: center;
+  display: flex;
+}
+
+.banner-text {
+  padding-bottom: 1rem;
+}
+
+.btn-start {
+  background-color: #fff;
+  font-size: 1.5rem;
+  width: 95%;
+  justify-content: center;
+}
+
+.btn-start h4 {
+  font-weight: 800;
+  padding: 0.5rem 0;
+  font-size: 1.5rem;
+  color: rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+.btn-start a {
+  text-decoration: none;
+}
+ 
+.btn {
+  border-radius: 2px;
+  height: 46px;
+  width: 95%;
+  color: #ecf0f1;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  border: none;
+  padding: 0px 16px;
+  background: #2c3e50 50%;
+  background-size: 100%;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+ 
+.btn:hover {
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
