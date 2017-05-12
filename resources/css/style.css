@@ -5,7 +5,7 @@ html {
 }
 
 div {
-   /* border: 1px solid red;*/
+   /* border: 1px solid red; */
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -225,7 +225,9 @@ header nav ul li {
 
 .banner-left {
   width: 60%;
-  margin-right: 2rem;
+    height: auto;
+    margin-right: 2rem;
+    align-items: flex-start;
 }
 
 .image-container {
@@ -360,9 +362,9 @@ header nav ul li {
 /* Course section */
 
 .start-learning {
+  color: #2c3e50;
   background-image: url('../images/learning-bg.jpg');
   flex-direction: column;
-  width: 100%;
 }
 
 .start-learning .learning-title {
@@ -402,7 +404,7 @@ header nav ul li {
 .course-text {
   margin-left: 1rem;
   margin-bottom: 1.5rem;
-  padding-right: 2rem;
+  padding-right: 1rem;
 }
 
 .course-text h5 {
@@ -411,6 +413,10 @@ header nav ul li {
 
 .course-text h6 {
   margin: 0.5rem 0;
+}
+
+.learning-title > h2 {
+  color: #2c3e50;
 }
 
 @media only screen and (max-width: 480px) {
@@ -459,3 +465,34 @@ header nav ul li {
     display: inline-flex;
   }
 }
+
+/* Thesis Styles */
+
+.thesis-title {
+  justify-content: center;
+  display: flex;
+  margin: 2rem auto;
+}
+
+.thesis-wrapper {
+  2rem 0 2rem 1.5rem;
+}
+
+..video-container {
+  width: 100%;
+}
+
+.banner-left.thesis {
+  flex-direction: column;
+  width: 65%;
+}
+
+.video-container {
+  width: 100%;
+}
+
+.video-container video {
+  width: 100%;
+}
+
+
