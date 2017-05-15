@@ -5,7 +5,7 @@ html {
 }
 
 div {
-   /* border: 1px solid red; */ 
+  /* border: 1px solid red; */
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -437,7 +437,7 @@ header nav ul li {
   }
   .block-img-mobile {
     display: block;
-    width: 100%%
+    width: 100%;
   }
   .block-img-mobile img {
     width: 100%;
@@ -449,6 +449,10 @@ header nav ul li {
   .info-img img {
     display: none;
   }
+  .info-text {
+    margin-top: 1rem;
+  }
+  
   .info-text {
     width: 97%;
     padding-left: 1rem;
@@ -520,6 +524,12 @@ header nav ul li {
   color: #2c3e50;
 }
 
+@media only screen and (min-width: 651px) {
+  .mobile {
+    display: none;
+  }
+}
+
 @media only screen and (max-width: 650px) {
   
   .courses {
@@ -534,13 +544,40 @@ header nav ul li {
     align-items: center;
   }
 
-  .course-img {
+  .course-img,.course-text h6,
+  .course-text p, .desktop {
     display: none;
   }
+  
+  button.accordion {
+    background-color: #ecf0f1;
+    color: #2c3e50;
+    cursor: pointer;
+    padding: 1rem;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    
+  }
+  
+  button.accordion:nth-child(n + 1) {
+    border-top: 1px solid #ddd;
+  }
 
-  .course-text h6,
-  .course-text p {
+  button.accordion.active, button.accordion:hover {
+    background-color: #ddd;
+  }
+
+  div.panel {
+    padding: 1.5rem;
+    background-color: white;
     display: none;
+  }
+  
+  .mobile {
+    width: 95%;
   }
 
   .course-text h5 {
@@ -554,7 +591,7 @@ header nav ul li {
   }
 
   .courses {
-    background-color: #eee;    
+    background-color: #fff;    
   }
 
   .start-learning {
@@ -579,7 +616,7 @@ header nav ul li {
 .thesis-title {
   justify-content: center;
   display: flex;
-  margin: 2rem auto;
+  margin: 0 auto;
 }
 
 .thesis-wrapper {
@@ -654,3 +691,8 @@ header nav ul li {
   color: #2c3e50;
   text-decoration: none;
 }
+
+@media only screen and (max-width: 550px) {
+  .footer-nav {
+    display: none;
+  }
