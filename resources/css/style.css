@@ -5,7 +5,7 @@ html {
 }
 
 div {
-   /* border: 1px solid red; */
+   /* border: 1px solid red; */ 
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -79,6 +79,15 @@ header a {
   color: #34495e;
 }
 
+.brand a { 
+  margin-right: 1rem;
+}
+
+.brand > a > img {
+  width: 160%;
+  height: auto;
+}
+
 .brand h1 {
   font-weight: 700;
   font-size: 1.4rem;
@@ -110,6 +119,7 @@ header nav ul li {
 .cl-effect-1 li::after {
 	display: inline-block;
 	opacity: 0;
+	color: #34495e;
 	-webkit-transition: -webkit-transform 0.3s, opacity 0.2s;
 	-moz-transition: -moz-transform 0.3s, opacity 0.2s;
 	transition: transform 0.3s, opacity 0.2s;
@@ -148,6 +158,14 @@ header nav ul li {
 }
 
 @media only screen and (max-width: 850px) {
+  header {
+    height: 4rem;
+  }
+  
+  header .content {
+    padding: 0px !important;
+  }
+  
   header .desktop {
     display: none;
   }
@@ -295,6 +313,40 @@ header nav ul li {
   box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
 
+@media only screen and (max-width:750px) {
+  
+  .banner .banner-wrapper {
+    display: block;
+    align-items: center;
+    margin: 0;
+  }
+  .banner .banner-left {
+    width: 100%;
+    align-items: center;
+    max-height: 15rem;
+    margin: auto;
+    overflow: hidden;
+  }
+  .banner .banner-right {
+    width: 90%;
+    margin-left: 0;
+    padding: 1rem 1rem;
+  }
+  .btn {
+    width: 98%;
+  }
+  
+  .banner-text h1 {
+    font-size: 2.5rem;
+  }
+  
+  .banner-text h4 {
+    font-size: 1.4rem;
+  }
+  
+}
+
+
 /* Info Section */
 
 .banner-wrapper#info {
@@ -316,15 +368,6 @@ header nav ul li {
   transition: background-color 0.5s ease;
 }
 
-.info-block:hover {
-  background-color: #3498db;
-  color: #ecf0f1;
-}
-
-.info-block:hover a {
-  color: #ecf0f1;
-  text-decoration: underline;
-}
 
 .info-img {
   width: 9rem;
@@ -357,6 +400,64 @@ header nav ul li {
 .quote-name {
   font-weight: bold;
   padding-top: 1.5rem;
+}
+
+@media only screen and (min-width:750px) {
+
+  .block-img-mobile {
+    display: none;
+  }
+  
+  .info-block:hover {
+  background-color: #3498db;
+  color: #ecf0f1;
+  }
+  
+  .info-block:hover a {
+  color: #ecf0f1;
+  text-decoration: underline;
+  }
+
+}
+
+@media only screen and (max-width:750px) {
+  
+  .second-banner .banner-wrapper {
+    display: inline;
+  }
+  .banner-wrapper#info {
+    margin: 0;
+    width: 100%;
+  }
+  .banner-left.info, .block-img {
+    display: none;
+  }
+  .list-block {
+    margin: 0 1rem;
+  }
+  .block-img-mobile {
+    display: block;
+    width: 100%%
+  }
+  .block-img-mobile img {
+    width: 100%;
+  }
+  .info-block {
+    flex-direction: column;
+    margin-bottom: 1rem;
+  }
+  .info-img img {
+    display: none;
+  }
+  .info-text {
+    width: 97%;
+    padding-left: 1rem;
+  }
+  .info-block#orientation {
+    top: 0;
+    position: static;
+    margin-bottom: 0;
+  }
 }
 
 /* Course section */
@@ -419,7 +520,7 @@ header nav ul li {
   color: #2c3e50;
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 650px) {
   
   .courses {
     justify-content: center;
@@ -462,11 +563,18 @@ header nav ul li {
   }
 
   .learning-title-mobile {
+    text-align: center;
     display: inline-flex;
   }
 }
 
 /* Thesis Styles */
+
+.thesis {
+  padding-top: 2rem;
+  color: #2c3e50;
+  background-color: #ecf0f1;
+}
 
 .thesis-title {
   justify-content: center;
@@ -495,4 +603,54 @@ header nav ul li {
   width: 100%;
 }
 
+@media only screen and (max-width: 750px) {
+  .thesis, .thesis-title {
+    text-align: center;
+  }
+  
+  .thesis .list-block {
+    display: none;
+  }
+  .thesis .banner-left {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .thesis .banner-text {
+    display: none;
+  }
+}
 
+/* Footer Area */
+
+.footer {
+  justify-content: space-between;
+  padding-top: 1rem;
+  padding-left: 1.5rem;
+  margin-bottom: 3rem;
+  border-top: 1px #eee solid;
+  color: #2c3e50;
+  font-size: .8rem;
+}
+
+.footer .copyright h5 {
+  font-size: .8rem;
+}
+
+
+.footer .footer-nav ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+
+.footer .footer-nav ul li {
+    display: inline-block;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.footer-nav ul li a {
+  color: #2c3e50;
+  text-decoration: none;
+}
