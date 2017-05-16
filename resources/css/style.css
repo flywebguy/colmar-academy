@@ -727,6 +727,18 @@ header nav ul li {
   width: 100%;
 }
 
+.info-block#fisma, .info-block#now {
+  padding: 1rem;
+}
+
+.info-block#fisma {
+  margin-top: 1rem;
+}
+
+#fisma > div.info-img, #now > div.info-img {
+  margin-right: 1rem;
+}
+
 @media only screen and (max-width: 750px) {
  
   .thesis, .thesis-title {
